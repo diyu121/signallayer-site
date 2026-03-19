@@ -142,11 +142,11 @@ function App() {
           <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-14 pt-14 sm:px-6 md:grid-cols-2 md:items-start md:pb-18 md:pt-20">
             <div className="pt-2">
               <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-                Catch risky AI leasing decisions before they become legal exposure
+                AI is making leasing decisions. Who’s managing the risk?
               </h1>
               <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-slate-600 sm:text-lg">
-                SignalLayer surfaces the leasing decisions most likely to trigger Fair Housing or compliance risk — before
-                complaints, audits, or legal issues force the problem.
+                SignalLayer monitors tenant screening, approvals, and leasing workflows to flag compliance and liability
+                risks before they turn into lawsuits or operational issues.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -154,7 +154,7 @@ function App() {
                   className="inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3b5bdb]"
                   href="#contact"
                 >
-                  Book a Demo
+                  Request Pilot
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white/70 px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3b5bdb]"
@@ -164,9 +164,8 @@ function App() {
                 </a>
               </div>
 
-              <div className="mt-6 text-sm text-slate-500">
-                Most operators can’t answer which leasing decisions would fail a Fair Housing review. SignalLayer makes
-                that visible in real time.
+              <div className="mt-5 text-sm text-slate-600">
+                We’ll follow up with a quick walkthrough + sample risk analysis.
               </div>
             </div>
 
@@ -302,14 +301,19 @@ function App() {
         <section className="border-t border-slate-200/70">
           <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-18">
             <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-              AI is already influencing leasing decisions. Most operators can’t see the risk.
+              Leasing is getting automated. Risk isn’t.
             </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
+              Property management teams are adopting AI across leasing — from tenant screening to approvals to
+              communication. But when decisions are automated, accountability gets blurry. Compliance risk, Fair Housing
+              exposure, and inconsistent decisions become harder to detect — and more expensive when missed.
+            </p>
             <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {[
-                ['Opaque screening decisions', 'You get outcomes, not defensible reasoning.'],
-                ['Fair Housing exposure', 'Patterns emerge before anyone notices.'],
-                ['Limited internal visibility', 'Risk lives across vendors and inboxes.'],
-                ['Weak audit readiness', 'Evidence is scattered when you need it most.'],
+                ['Opaque screening decisions', 'Outcomes are easy to see. Defensible reasoning often isn’t.'],
+                ['Fair Housing exposure', 'Risk accumulates quietly across denials and overrides.'],
+                ['Limited internal visibility', 'Decision context lives across tools, teams, and vendors.'],
+                ['Weak audit readiness', 'Evidence is incomplete when you need to prove what happened.'],
               ].map(([title, body]) => (
                 <div
                   key={title}
@@ -319,6 +323,38 @@ function App() {
                   <div className="mt-2 text-sm leading-relaxed text-slate-600">{body}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 3b. What SignalLayer does */}
+        <section className="border-t border-slate-200/70 bg-white/40">
+          <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-18">
+            <div className="grid gap-8 md:grid-cols-2 md:items-start">
+              <div>
+                <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+                  A risk layer for AI-driven leasing
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  SignalLayer sits alongside your leasing workflows and continuously evaluates decisions for potential
+                  risk before they are executed or finalized.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="text-sm font-semibold text-slate-900">What we flag</div>
+                <div className="mt-4 grid gap-3">
+                  {[
+                    'Tenant screening decisions that may introduce bias or Fair Housing risk',
+                    'Approvals or denials without sufficient documented justification',
+                    'AI-generated leasing communication that creates legal exposure',
+                    'Inconsistent decision patterns across properties or operators',
+                  ].map((x) => (
+                    <div key={x} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                      <span className="font-semibold text-slate-900">•</span> <span>{x}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -372,13 +408,13 @@ function App() {
         <section id="how-it-works" className="border-t border-slate-200/70">
           <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-18">
             <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-              An early warning system for AI-driven leasing risk
+              How it works
             </h2>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
-                ['1', 'Capture decisions', 'Ingest screening and approval decisions with the context you already have.'],
-                ['2', 'Detect risk signals', 'Identify high-risk outcomes, overrides, missing documentation, and anomalous patterns.'],
-                ['3', 'Surface what matters', 'Prioritize review queues and generate audit-ready snapshots on demand.'],
+                ['1', 'Connect to your leasing workflow', 'Screening, approvals, and communication tools'],
+                ['2', 'Analyze decisions and supporting context', 'Evaluate actions, patterns, and documentation'],
+                ['3', 'Flag high-risk actions before they become issues', 'Surface risky decisions before they create legal or operational problems'],
               ].map(([n, title, body]) => (
                 <div key={n} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                   <div className="inline-flex items-center gap-2">
@@ -497,7 +533,7 @@ function App() {
           <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-18">
             <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
               <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-                If AI is influencing your leasing decisions, you need to know where the risk is.
+                Start catching risk before it becomes a problem
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
                 Book a demo to see how SignalLayer surfaces risky decisions before they become expensive problems.
@@ -507,7 +543,7 @@ function App() {
                   className="inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
                   href="#contact"
                 >
-                  Book a Demo
+                  Request Pilot
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50"
@@ -526,11 +562,11 @@ function App() {
             <div className="grid gap-8 md:grid-cols-2 md:items-start">
               <div>
                 <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-                  Book a demo for a pilot.
+                  Request a pilot walkthrough.
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Tell us what screening workflow you use today and what you need to prove in an audit.
-                  We’ll show you how SignalLayer detects risk signals without replacing your existing tools.
+                  Where are you seeing risk or uncertainty in leasing decisions? We’ll use that context to show what
+                  SignalLayer would flag in your workflow.
                 </p>
                 <div className="mt-6 text-sm text-slate-600">
                   Or email us at{' '}
@@ -629,7 +665,7 @@ function App() {
                     disabled={isSubmitting}
                     className="inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3b5bdb]"
                   >
-                    {isSubmitting ? 'Sending…' : 'Book a Demo'}
+                    {isSubmitting ? 'Sending…' : 'Request Pilot'}
                   </button>
                   {submitSuccess ? (
                     <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-[12px] text-emerald-900/80">
