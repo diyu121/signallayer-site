@@ -1,12 +1,6 @@
 import { useMemo, useState } from 'react'
 
 function HealthcarePage() {
-  const navItems = [
-    { href: '#product', label: 'Product' },
-    { href: '#how-it-works', label: 'How It Works' },
-    { href: '#pilot', label: 'Pilot' },
-    { href: '#contact', label: 'Contact' },
-  ] as const
 
   const decisions = [
     { id: 'Claim #4821', level: 'High Risk', reason: 'Missing physician attestation + MEAT criteria not met' },
